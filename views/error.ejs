@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/errorfavicon.png">
+    <title>Error-One Click File Share</title>
+    <style>
+        link[rel="icone"] {
+            border-radius: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d7da;
+            color: #721c24;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 10px;
+        }
+
+        .error-heading {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .error-message {
+            font-size: 18px;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .home-link:hover {
+            background-color: #c82333;
+        }
+
+        .error-container-foot {
+            position: fixed;
+            height: 30px;
+            background-color: tomato;
+            width: 98%;
+            bottom: 10px;
+            border-radius: 5px;
+            left: 5px;
+            right: 5px;
+            padding: 8px;
+            animation: erroranimation 2s linear backwards;
+            transform-origin: right;
+        }
+
+        .error-text-foot {
+            position: absolute;
+            left: 10px;
+            color: #fff;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: color 2s linear;
+        }
+
+        @keyframes erroranimation {
+            0% {
+                transform: scaleX(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scaleX(0);
+                opacity: 0;
+            }
+        }
+        .close {
+            position: absolute;
+            font-size: 30px;
+            color: #fff;
+            right: 15px;
+        }
+
+        .close:hover {
+            cursor: pointer;
+            filter: brightness(0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-container">
+        <div class="error-heading">Oops!</div>
+        <div class="error-message">
+            <%= error %>
+        </div><br>
+    </div>
+    <footer class="error-container-foot">
+        <div class="close">&times;</div>
+        <div class="error-text-foot">!oops Something went wrong</div>
+    </footer>
+    <script>
+        const close=document.querySelector(".close");
+        close.addEventListener("click",()=>{
+            const container=document.querySelector(".error-container-foot");
+            container.style.display="none";
+        })
+    </script>
+</body>
+
+</html>

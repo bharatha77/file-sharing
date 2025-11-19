@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/downloadfavicon.png">
+    <link rel="stylesheet" href="/styledownload.css">
+    <title>Download-One Click File Share</title>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="img-container">
+            <img src="/download.png">
+        </div>
+        <div class="discription">
+            <h3>Download Your File</h3>
+            <p>File Expires in 48 Hours</p>
+            <h4 class="filename"><%=filename %></h4>
+            <p class="size"><%= parseInt(size/1000) %>KB</p>
+        </div>
+        <div class="download">
+            <a href="<%= download %>">Download</button>
+        </div>
+    </div>
+    
+</body>
+</html>

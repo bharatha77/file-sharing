@@ -1,0 +1,48 @@
+link[rel="icon"] {
+    border-radius: 20%;
+}
+body{
+    background-color:rgba(156, 190, 206, 0.694);
+    height: 100vh;
+    width: 100%;
+}
+body,.outer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.outer-container{
+    width: 300px;
+    min-height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(42, 38, 38, 0.584);
+}
+.img-container img{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    filter:opacity(0.6);
+}
+.discription{
+    font-size: 14px;
+    text-align: center;
+}
+.filename,.size,.download{
+    margin-top: -10px;
+}
+.download{
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+.download a{
+    text-decoration: none;
+    padding: 5px 30px;
+    background-color: rgba(22, 160, 184, 0.829);
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 5px;
+}

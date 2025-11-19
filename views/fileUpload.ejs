@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Click File Share</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.jpg">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/filelogofinal.png">
+    </div>
+    <div class="outer-container">
+        <div class="drop-zone">
+            <div class="img-container dragged">
+                <img src="/files.jpeg" alt="file" class="img-one">
+                <img src="/files.jpeg" alt="file" class="img-two">
+                <img src="/files.jpeg" alt="file" class="img-three">
+            </div>
+            <input type="file" class="file">
+            <div class="drop-file">Drop Your File or,<span class="upload">Select File</span></div>
+        </div>
+        <div class="progress-conatiner">
+            <div class="bg-progress"></div>
+            <div class="inner-container">
+                <div class="text">Uploading...</div>
+                <div class="percentage-conatiner"><span id="percent">0</span></div>
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="link-container">
+            <div class="textlink">Link Expires in 48 Hours</div>
+            <div class="link">
+                <input type="text" id="linkcopy" readonly value="http://localhost:3000/file/download/RzxTu">
+            </div>
+            <div class="copy">
+                <i class="fa-regular fa-copy" id="copybtn"></i>
+            </div>
+        </div>
+    </div>
+    <script src="/indexjs.js"></script>
+</body>
+
+</html>

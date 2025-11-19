@@ -1,0 +1,195 @@
+:root{
+    --conatiner-width:500px;
+}
+
+body{
+    background-color:rgba(156, 190, 206, 0.694);
+    height: 100vh;
+    width: 100%;
+    background-image: url("filelogofinal.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+body,.drop-zone, .outer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.outer-container{
+    box-shadow: 5px 5px 5px rgba(42, 38, 38, 0.584);
+}
+.logo{
+    width: 100px;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #dc3131;
+}
+.logo img{
+    width: 100px;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    mix-blend-mode: overlay;
+}
+.outer-container{
+    background-color: #fff;
+    border-radius: 20px;
+}
+.drop-zone{
+    width: var(--conatiner-width);
+    min-height: 200px;
+    border: 2px solid rgb(20, 125, 173);
+    border-radius: 20px;
+    margin: 30px;
+    transition: transform 2s ease;
+}
+.dragged.drop-zone{
+    background-color: #dcd4d4a4;
+}
+.img-container{
+    width: 100px;
+    height: 100px;
+}
+.img-container img{
+    border-radius: 10px;
+    position: absolute;
+    width: 80px;
+}
+.img-two{
+    z-index: 2;
+}
+.img-container .img-one,.img-three{
+    filter: grayscale(0.9);
+}
+.dragged .img-container .img-three{
+    transform: rotate(10deg) translateX(20px) scale(0.9);
+    transform-origin: bottom;
+}
+.dragged .img-container .img-one{
+    transform: rotate(-10deg) translateX(-20px) scale(0.9);
+    transform-origin: bottom;
+}
+.dragged .img-container .img-two{
+    transform: translateY(-5px);
+}
+.file{
+    display: none;
+}
+.upload{
+    color: rgb(12, 139, 193);
+}
+.upload:hover{
+    cursor: pointer;
+}
+.progress-conatiner{
+    display: none;
+    width: var(--conatiner-width);
+    height: 70px;
+    border: 1px solid  rgb(182, 216, 231);
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+.bg-progress{
+    width: 0;
+    height: 100%;
+    background-color:  rgba(169, 221, 244, 0.265);
+    border-radius: 20px;
+    position: absolute;
+    transition: width linear;
+}
+.inner-container{
+    position: absolute;
+    height: 100%;
+    margin: 10px 15px;
+    width: calc(100% - 30px);
+}
+.progress-bar{
+    height: 3px;
+    background-color: rgb(8, 158, 227);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform linear;
+}
+.link-container{
+    width: var(--conatiner-width);
+    position: relative;
+    display: none;
+}
+.link-container input{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px 20px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    border: 1px solid  rgb(135, 202, 231);
+    box-sizing: border-box;
+
+}
+.copy{
+    position: absolute;
+    right: 7px;
+    top: 25px;
+    font-size: 25px;
+    color: black;
+}
+#copybtn:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:900px) {
+    :root{
+        --conatiner-width:300px;
+    }
+}
+footer{
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    background-color: black;
+    text-align: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
