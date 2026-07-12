@@ -37,6 +37,9 @@ const upload = multer({ storage });
 //         cb(null,name);
 //     }
 // })
+route.get("/", (req, res) => {
+    res.redirect("/file/upload");
+});
 route.get("/file/upload",(req,res)=>{
     res.render("fileUpload")
 })

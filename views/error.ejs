@@ -7,6 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/errorfavicon.png">
     <title>Error-One Click File Share</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FEJY947DJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9FEJY947DJ');
+    </script>
     <style>
         link[rel="icone"] {
             border-radius: 20px;
@@ -88,6 +97,7 @@
                 opacity: 0;
             }
         }
+
         .close {
             position: absolute;
             font-size: 30px;
@@ -114,10 +124,10 @@
         <div class="error-text-foot">!oops Something went wrong</div>
     </footer>
     <script>
-        const close=document.querySelector(".close");
-        close.addEventListener("click",()=>{
-            const container=document.querySelector(".error-container-foot");
-            container.style.display="none";
+        const close = document.querySelector(".close");
+        close.addEventListener("click", () => {
+            const container = document.querySelector(".error-container-foot");
+            container.style.display = "none";
         })
     </script>
 </body>
